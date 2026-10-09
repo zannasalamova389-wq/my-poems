@@ -1,0 +1,160 @@
+/* ============================================
+   БАЗОВЫЕ СТИЛИ
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fdf8f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ============================================
+   ШАПКА
+   ============================================ */
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #fdf8f0 0%, #f0e6d2 100%);
+    border-bottom: 2px solid #d4a373;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #4a3c31;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+    color: #8b7355;
+    font-style: italic;
+}
+
+/* ============================================
+   ОСНОВНОЙ КОНТЕНТ
+   ============================================ */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ============================================
+   БЛОК СТИХОТВОРЕНИЯ
+   ============================================ */
+.poem-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+.poem-section.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Картинка */
+.poem-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.poem-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.poem-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Текст */
+.poem-text {
+    flex: 1;
+}
+
+.poem-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #4a3c31;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #d4a373;
+    padding-bottom: 12px;
+}
+
+.poem-text p {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #555;
+    line-height: 2;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.poem-text .small {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #999;
+    font-style: normal;
+    margin-top: 15px;
+}
+
+/* ============================================
+   ПОДВАЛ
+   ============================================ */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #4a3c31;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* ============================================
+   АДАПТИВНОСТЬ
+   ============================================ */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .poem-section,
+    .poem-section.reverse {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px;
+        margin-bottom: 50px;
+    }
+
+    .poem-image {
+        max-width: 100%;
+    }
+
+    .poem-text h2 {
+        font-size: 24px;
+    }
+
+    .poem-text p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+}
